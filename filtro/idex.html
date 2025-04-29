@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Filtro de Plantas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <div class="filtros-busqueda">
+    <h3>Filtrar Plantas</h3>
+
+    <div class="campo">
+      <label for="cuidado">Tipo de cuidado:</label>
+      <select id="cuidado">
+        <option value="">Todos</option>
+        <option value="facil">Fácil de cuidar</option>
+        <option value="requiere">Requiere cuidado</option>
+        <option value="complejo">Cuidado complejo</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="luz">Nivel de luz:</label>
+      <select id="luz">
+        <option value="">Todos</option>
+        <option value="sombra">Sombra</option>
+        <option value="indirecta">Luz indirecta</option>
+        <option value="directa">Luz directa</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="mascotas">Mascotas:</label>
+      <select id="mascotas">
+        <option value="">Todos</option>
+        <option value="apto">Apto para mascotas</option>
+        <option value="no-apto">No apto para mascotas</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="diametro">Diámetro del macetero:</label>
+      <select id="diametro">
+        <option value="">Todos</option>
+        <option value="s">S/12-14cm</option>
+        <option value="m">M/15-17cm</option>
+        <option value="l">L/18-21cm</option>
+        <option value="xl">XL/22-25cm</option>
+        <option value="xxl">XXL/26-30cm</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="ubicacion">Ubicación:</label>
+      <select id="ubicacion">
+        <option value="">Todas</option>
+        <option value="exterior">Exterior</option>
+        <option value="interior">Interior</option>
+        <option value="dormitorio">Dormitorio</option>
+        <option value="baño">Baño</option>
+        <option value="salon">Salón</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="tamano">Tamaño de la planta (20cm - 170cm):</label>
+      <input type="range" id="tamano" min="20" max="170" value="95" oninput="actualizarTamano(this.value)">
+      <span id="valorTamano">95 cm</span>
+    </div>
+
+    <button onclick="aplicarFiltros()">Aplicar filtros</button>
+  </div>
+
+  <script src="filtros.js"></script>
+</body>
+</html>
